@@ -1,0 +1,14 @@
+{
+  "name": "xstate-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ThaddeusJiang/xstate-demo.git",
+  "author": "TJ <thaddeusjiang@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "node server.js"
+  },
+  "dependencies": {
+    "restify": "^8.5.1"
+  }
+}
