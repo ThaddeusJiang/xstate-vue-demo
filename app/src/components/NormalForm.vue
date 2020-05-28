@@ -1,14 +1,16 @@
 <template>
-  <form @submit.prevent="onSubmit">
-    <h2 v-if="loading">loading...</h2>
-    <h3 v-if="error">{{ error }}</h3>
+  <div>
+    <h1>Normal Form</h1>
+    <form @submit.prevent="onSubmit">
+      <div>name:<input name="name" v-model="name" /></div>
+      <div>age: <input name="age" v-model.number="age" /></div>
+      <div>address: <input name="address" v-model="address" /></div>
 
-    <div>name:<input name="name" v-model="name" /></div>
-    <div>age: <input name="age" v-model="age" /></div>
-    <div>address: <input name="address" v-model="address" /></div>
-
-    <button type="submit">submit</button>
-  </form>
+      <p v-if="loading">loading...</p>
+      <p v-if="error">{{ error }}</p>
+      <button type="submit" :disabled="loading || error">submit</button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -24,9 +26,11 @@ export default {
       address: '',
     };
   },
+
   async created() {
     await this.fetchData();
   },
+
   methods: {
     async fetchData() {
       this.loading = true;
@@ -36,7 +40,7 @@ export default {
         this.age = res.age;
         this.address = res.address;
       } catch (error) {
-        this.error = error.message;
+        this.error = error;
       }
 
       this.loading = false;

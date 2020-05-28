@@ -3,8 +3,18 @@
 ## Dev
 ### Start server
 ```sh
-yarn dev:server
+node server.js
 ```
+
+### Start App (the second terminal)
+```
+cd app
+
+yarn
+
+yarn serve
+```
+
 open http://localhost:8080
 
 

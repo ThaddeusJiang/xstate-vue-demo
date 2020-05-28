@@ -1,30 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <NormalForm />
-
-
+    <XStateForm />
   </div>
 </template>
 
 <script>
-import NormalForm from "./components/NormalForm";
+import NormalForm from './components/NormalForm';
+import XStateForm from './components/XStateForm';
 
 export default {
   name: 'App',
   components: {
     NormalForm,
-  }
-}
+    XStateForm,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
 }
 </style>

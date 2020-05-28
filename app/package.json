@@ -8,8 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/composition-api": "^0.5.0",
+    "@xstate/vue": "^0.1.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "xstate": "^4.10.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
